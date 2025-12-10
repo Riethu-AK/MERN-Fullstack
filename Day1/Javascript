@@ -1,0 +1,51 @@
+let -> block scope:it can be updated but not redeclared
+var -> functional/global scope : it can be redeclared and updated
+const -> block scope : it cannot be redeclared or updated
+
+=== checks value + datatype are same
+== checks only values
+
+ARROW FUNTION:
+this is not used in arrow function
+it is short hand method
+
+Copying Arrays
+let arr1 = [1, 2, 3];
+let arr2 = [...arr1];
+
+console.log(arr2); // [1, 2, 3]
+
+✅ Spread Operator: ...
+
+(Without modifying the original array)
+
+2️⃣ Merging Arrays
+let a = [1, 2];
+let b = [3, 4];
+
+let merged = [...a, ...b];
+console.log(merged); // [1, 2, 3, 4]
+
+3️⃣ Adding Values While Copying
+let nums = [1, 2, 3];
+let newNums = [0, ...nums, 4];
+
+console.log(newNums); // [0, 1, 2, 3, 4]
+
+4️⃣ Copying Objects
+let student = { name: "Sujith", age: 19 };
+let copy = { ...student };
+
+console.log(copy);
+// { name: "Sujith", age: 19 }
+
+5️⃣ Merging Objects
+let a = { name: "Sujith" };
+let b = { age: 19 };
+
+let merged = { ...a, ...b };
+
+console.log(merged); 
+// { name: "Sujith", age: 19 }
+
+Node js is used to use js outside the browser
