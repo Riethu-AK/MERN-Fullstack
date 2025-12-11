@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Example</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        .box {
+            width: 120px;
+            height: 120px;
+            padding: 10px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        /* STATIC */
+        .static {
+            background: #2196F3;
+            position: static;
+        }
+
+        /* RELATIVE */
+        .relative {
+            background: #4CAF50;
+            position: relative;
+            top: 20px;
+            left: 30px;
+        }
+
+        /* ABSOLUTE */
+        .container {
+            position: relative;
+            height: 200px;
+            background: #ddd;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .absolute {
+            background: #FF5722;
+            position: absolute;
+            top: 30px;
+            right: 20px;
+        }
+
+        /* FIXED */
+        .fixed {
+            background: #9C27B0;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        /* STICKY */
+        .sticky {
+            background: #795548;
+            position: sticky;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Position Examples</h1>
+
+    <h2>1. Static</h2>
+    <div class="box static">Static</div>
+
+    <h2>2. Relative</h2>
+    <div class="box relative">Relative</div>
+
+    <h2>3. Absolute (Inside Container)</h2>
+    <div class="container">
+        <p>This is a parent container.</p>
+        <div class="box absolute">Absolute</div>
+    </div>
+
+    <h2>4. Sticky</h2>
+    <div class="box sticky">Sticky (Scroll)</div>
+
+    <p>Scroll down to see sticky working...</p>
+    <p style="height: 700px;"></p>
+
+    <h2>5. Fixed</h2>
+    <p>The fixed box is always at the bottom-right corner.</p>
+    <div class="box fixed">Fixed</div>
+
+</body>
+</html>

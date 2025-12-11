@@ -1,0 +1,112 @@
+✅ CSS Box Model Explained
+
+Every HTML element is treated as a box in CSS.
+The box has 4 main parts (from inside → outside):
+
++-------------------------------+
+|          Margin              |
+|  +-------------------------+  |
+|  |        Border          |  |
+|  |  +-------------------+ |  |
+|  |  |     Padding       | |  |
+|  |  |  +--------------+ | |  |
+|  |  |  |   Content    | | |  |
+|  |  |  +--------------+ | |  |
+|  |  +-------------------+ |  |
+|  +-------------------------+  |
++-------------------------------+
+
+
+
+1️⃣ Content
+
+The actual text or image inside the box.
+
+2️⃣ Padding
+
+Space between content and border.
+Adds inner space.
+
+3️⃣ Border
+
+The line around the padding & content.
+
+4️⃣ Margin
+
+Space outside the border.
+Creates gap between elements.
+
+
+CSS POSITIONS :
+
+⭐ 1. static (default)
+
+Every element is static unless changed.
+
+✔ No top / left / right / bottom works
+✔ Follows normal page flow
+
+.box {
+    position: static;
+}
+
+⭐ 2. relative
+
+Moves the element relative to its original position.
+
+✔ Takes space in layout
+✔ You can use top/left/right/bottom
+
+.box {
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
+⭐ 3. absolute
+
+Positions the element relative to the nearest positioned parent
+(closest parent with position: relative, absolute, or fixed).
+
+✔ Does NOT take space in normal flow
+✔ Free movement using top/left/right/bottom
+
+.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+⭐ 4. fixed
+
+Sticks to the viewport (browser window).
+Does NOT move even if you scroll.
+
+Great for:
+
+Sticky navbar
+
+Chat button
+
+Floating icons
+
+.box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+⭐ 5. sticky
+
+Behaves like relative → until you scroll, then becomes fixed.
+
+Example: A header that "sticks" when scrolling.
+
+.box {
+    position: sticky;
+    top: 0;
+}
