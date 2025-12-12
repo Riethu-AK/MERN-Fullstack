@@ -13,7 +13,7 @@ function App() {
   const [editDesc, setEditDesc] = useState('')
   const [editAmt, setEditAmt] = useState('')
 
-  const API = 'http://localhost:5000'
+  const API = 'https://expense-tracker-mern-wnyw.onrender.com'
 
   useEffect(() => {
     if (isAuthed) {
